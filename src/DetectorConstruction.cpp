@@ -40,7 +40,7 @@ G4Region* DetectorConstruction::GetTargetRegion()  {
 }
 
 G4VPhysicalVolume* DetectorConstruction::ConstructDetector() {
-    G4ThreeVector targetSize(0.5*um, 0.5*um, 0.5*um);
+    G4ThreeVector targetSize(0.5*um, 0.5*um, 0.125*um);
     G4ThreeVector worldSize(1*um, 1*um, 1*um);
     worldBox = new G4Box("World", worldSize.x()/2, worldSize.y()/2, worldSize.z()/2);
     worldLogicVol = new G4LogicalVolume(worldBox, gasMat, "World");
